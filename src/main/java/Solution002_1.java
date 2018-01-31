@@ -1,6 +1,9 @@
 /**
  * Created by hanzhou on 2018/1/25.
  */
+
+// AC 15%
+
 public class Solution002_1 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
@@ -12,6 +15,8 @@ public class Solution002_1 {
         while (l1!=null || l2!=null || digitSum !=0){
             if(l1!=null){digitSum+=l1.val;l1=l1.next;}
             if(l2!=null){digitSum+=l2.val;l2=l2.next;}
+
+
             if(digitSum>=10){digit = digitSum - 10;digitSum=1;}
             else            {digit = digitSum;     digitSum=0;}
 

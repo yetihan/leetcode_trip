@@ -14,6 +14,8 @@ import java.util.List;
 //Output: 7 -> 0 -> 8
 //Explanation: 342 + 465 = 807.
 
+// 这个方式测试样例里面有越界的情况,没法通过测试
+
 
 class ListNode {
     int val;
@@ -101,4 +103,4 @@ public class Solution002 {
 
 }
 
-// 这个方式测试样例里面有越界的情况,没法通过测试
+
