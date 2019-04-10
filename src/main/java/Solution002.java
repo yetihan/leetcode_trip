@@ -1,5 +1,3 @@
-import java.util.List;
-
 /**
  * Created by hanzhou on 2018/1/25.
  */
@@ -16,15 +14,8 @@ import java.util.List;
 
 // 这个方式测试样例里面有越界的情况,没法通过测试
 
+//因为这个.java文件里面有多个类,所以intellj对他的显示会区别对待
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 public class Solution002 {
 
@@ -100,7 +91,14 @@ public class Solution002 {
         }
 
     }
-
 }
 
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+}
 
