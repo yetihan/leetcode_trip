@@ -1,3 +1,5 @@
+package mess;
+
 /**
  * Created by hanzhou on 2018/1/25.
  */
@@ -47,12 +49,12 @@ public class Solution002 {
 //        int v;
 //        v= num%10;
 //        num = num/10;
-//        ListNode res = new ListNode(v);
-//        ListNode moveNode = res;
+//        mess.ListNode res = new mess.ListNode(v);
+//        mess.ListNode moveNode = res;
 //        while (num>0){
 //            v = num%10;
 //            num = num/10;
-//            l = new ListNode(v);
+//            l = new mess.ListNode(v);
 //            moveNode.next = l;
 //            moveNode = l;
 //        }
