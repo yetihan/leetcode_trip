@@ -1,0 +1,15 @@
+Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+
+满足和为k的子数组的个数
+
+思路一:
+两层循环,外层是连续子数组的起点,内层是终点
+
+第一次submit出错,莫名其妙假设所有数字都是正整数
+
+这种暴力法,效率太低
+
+
+思路二:
+hashmap
+遍历array,并在map中存入,(sum,num)对,当map包含 sum-k时说明有子数组满足要求
