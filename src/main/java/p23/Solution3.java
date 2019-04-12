@@ -2,8 +2,8 @@ package p23;
 
 import util.ListNode;
 
-import java.util.PriorityQueue;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * https://leetcode.com/problems/merge-k-sorted-lists/
@@ -20,43 +20,29 @@ import java.util.Comparator;
  * k的最小堆
  */
 
-public class Solution2 {
+public class Solution3 {
     public static ListNode mergeKLists(ListNode[] lists) {
 
-        //以下四种写法等价
-
-//        PriorityQueue<ListNode> minHeap1 = new PriorityQueue<>(new ListNodeComparator());
-//        PriorityQueue<ListNode> minHeap2 = new PriorityQueue<>(new Comparator<ListNode>(){
-//            @Override
-//            public int compare(ListNode o1, ListNode o2) {
-//                return o1.val - o2.val;
-//            }
-//        });
-
-//        PriorityQueue<ListNode> minHeap3 = new PriorityQueue<ListNode>((ListNode o1, ListNode o2 )-> o1.val - o2.val);
 
         PriorityQueue<ListNode> minHeap = new PriorityQueue<>(Comparator.comparing((ListNode o) -> o.val));
 
-
-        for (int i = 0; i < lists.length; i++) {
-            ListNode node = lists[i];
-            if (node == null) continue;
-            minHeap.add(node);
-            lists[i] = node.next;
+        for (ListNode head : lists) {
+            if(head==null) continue;
+            minHeap.add(head);
         }
 
         ListNode dumy = new ListNode(0); //哨兵
         ListNode cur = dumy;                //游标
-        while (minHeap.size()>0){
-            ListNode pollNode = minHeap.poll();
-            if(pollNode.next!=null) minHeap.add(pollNode.next);
-            cur.next = pollNode;
+        while (minHeap.size() > 0) {
+            cur.next = minHeap.poll();
+
+            if(cur.next.next!=null) minHeap.add(cur.next.next);
             cur = cur.next;
-            System.out.println("poll:"+cur.val);
         }
 
         return dumy.next;
     }
+
     public static void main(String[] args) {
 
 
@@ -72,9 +58,3 @@ public class Solution2 {
     }
 }
 
-class ListNodeComparator implements Comparator<ListNode>{
-    public int compare(ListNode s1, ListNode s2) {
-        return s1.val - s2.val;
-    }
-
-}

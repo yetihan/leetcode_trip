@@ -29,6 +29,9 @@ PriorityQueue<ListNode> minHeap2 = new PriorityQueue<>(new Comparator<ListNode>(
 // lambda实现
 PriorityQueue<ListNode> minHeap = new PriorityQueue<ListNode>((ListNode o1, ListNode o2 )-> o1.val - o2.val);
 
+// Compare.comparing
+PriorityQueue<ListNode> minHeap = new PriorityQueue<ListNode>( Compare.comparing((ListNode o)-> o.val));
+
 ```
 
-第三版 比第二版效率差
+这个题目下面 匿名类的效率 > lambda的效率 > Compare.comparing

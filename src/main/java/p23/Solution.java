@@ -26,7 +26,6 @@ public class Solution {
     public static ListNode mergeKLists(ListNode[] lists) {
         if(lists==null || lists.length==0)return null;
 
-        ListNode mergedList;
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int i = 0; i < lists.length; i++) {
             ListNode node = lists[i];
@@ -35,16 +34,16 @@ public class Solution {
             lists[i] = node.next;
         }
 
-        mergedList = new ListNode(Integer.MIN_VALUE);
-        ListNode node=mergedList;
+        ListNode dumy = new ListNode(0); //哨兵
+        ListNode cur=dumy;                  //游标
 
         int i = 0;
-        while (!minHeap.isEmpty()){
+        while (minHeap.size()>0){
             int emptyNum = 0;
 
             ListNode tmp = new ListNode(minHeap.poll());
-            node.next = tmp;
-            node = tmp;
+            cur.next = tmp;
+            cur = tmp;
 
             if(emptyNum==lists.length) continue;  //卡住了,不知道为什么idea报always false的 warinig
 
@@ -63,7 +62,7 @@ public class Solution {
 
         }
 
-        return mergedList.next;
+        return dumy.next;
     }
 
     public static void main(String[] args) {
