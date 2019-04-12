@@ -1,7 +1,10 @@
 package p23;
 
-import util.ListNode;
+// *************
+// 错误答案
+// *************
 
+import util.ListNode;
 import java.util.PriorityQueue;
 
 /**
@@ -43,7 +46,7 @@ public class Solution {
             node.next = tmp;
             node = tmp;
 
-            if(emptyNum==lists.length) continue;  //卡住了
+            if(emptyNum==lists.length) continue;  //卡住了,不知道为什么idea报always false的 warinig
 
             ListNode walker = lists[i];
             while (walker==null && emptyNum<lists.length){
