@@ -1,11 +1,11 @@
 package p10;
 
 /**
+ * Recursion 解法
+ *
  * 看了python的解法翻译成了java
  *
  * 题目理解还是有问题,b*,可以是0个b
- *
- * 这个方法用的是 递归 Recursion
  */
 
 public class Solution2 {
@@ -14,7 +14,7 @@ public class Solution2 {
         boolean firstMatch = !s.isEmpty() && (p.charAt(0) == s.charAt(0) || p.charAt(0) == '.');
 
         if(p.length()>=2 && p.charAt(1)=='*'){
-            return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));  //两种情况
+            return isMatch(s, p.substring(2)) || (firstMatch && isMatch(s.substring(1), p));  //两种情况,前者对应 *代表0个,后者代表大于1个
         }
         else return firstMatch && isMatch(s.substring(1), p.substring(1));
     }
