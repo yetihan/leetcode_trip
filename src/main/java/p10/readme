@@ -1,0 +1,18 @@
+Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
+
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+
+s could be empty and contains only lowercase letters a-z.
+p could be empty and contains only lowercase letters a-z, and characters like . or *
+
+
+先考虑简单情况,没有 *
+
+.*,表示1或更多个任意字符,真太搞了  -_-
+
+在我的Solution1的基础要能够处理".*",要单独写一堆代码
+
+I GIVE UP
+
+看答案去了
