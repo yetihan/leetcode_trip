@@ -36,3 +36,5 @@ boolean firstMatch = (p.charAt(0) == s.charAt(0) || p.charAt(0) =='.');
 #改成
 boolean firstMatch = !s.isEmpty() && (p.charAt(0) == s.charAt(0) || p.charAt(0) =='.');
 ```
+
+自己写bottom-top的DP
