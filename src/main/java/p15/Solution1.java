@@ -1,6 +1,5 @@
 package p15;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Solution1 {
@@ -17,8 +16,8 @@ public class Solution1 {
                     if(nums[lo]+nums[hi]==sum){
                         res.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
                         lo++;hi--;
-                        while (nums[lo]==nums[lo-1]&&lo<hi) lo++;
-                        while (nums[hi]==nums[hi+1]&&lo<hi) hi--;
+                        while (nums[lo]==nums[lo-1]&&lo<hi) lo++; //skip same result
+                        while (nums[hi]==nums[hi+1]&&lo<hi) hi--; //skip same result,两个skip 可以只保留一个
                     }else if(nums[lo]+nums[hi]<sum) lo++;
                     else hi--;
                 }

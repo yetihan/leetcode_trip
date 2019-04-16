@@ -10,7 +10,7 @@ The solution set must not contain duplicate triplets.
 
 **Example:**
 
-```python
+```
 Given array nums = [-1, 0, 1, 2, -1, -4],
 
 A solution set is:
@@ -26,7 +26,7 @@ A solution set is:
 
 双指针法在利用某些限定条件后,可以少遍历很多情况.
 
-```java
+```
 while (lo<hi){
     if(nums[lo]+nums[hi]==sum){
         res.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
