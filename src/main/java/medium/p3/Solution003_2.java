@@ -1,13 +1,14 @@
-package mess;
+package medium.p3;
 
 /**
  * Created by hanzhou on 2018/1/26.
+ *
+ *   没什么思路,google一下,看了一眼别人的思路,
+ *   双指针法,s[i,j] 移动j为j+1,s[j]不在s[i,j]中移动成功,自己写了看看
+ *
+ *    错误的双指针法-_-,还是 two for-loop
  */
 
-
-//  没什么思路,google一下,看了一眼别人的思路,
-//  双指针法,s[i,j] 移动j为j+1,s[j]不在s[i,j]中移动成功,自己写了看看
-//
 
 public class Solution003_2 {
 
