@@ -1,7 +1,7 @@
 package medium.p17;
 
 /**
- * 9可能要单独处理
+ * 乘法原理
  */
 
 import java.util.ArrayList;
