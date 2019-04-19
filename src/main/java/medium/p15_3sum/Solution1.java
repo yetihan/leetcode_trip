@@ -12,6 +12,9 @@ public class Solution1 {
                 int sum = 0 - nums[i];
                 int lo = i+1;
                 int hi = nums.length-1;
+                if(nums[i+1]+nums[i+2]>sum) break;//最小值已经超出目标,当前i以及更右边的i都没有满足条件的解了
+                if(nums[hi]+nums[hi-1]<sum) continue; //最大值还还是小鱼目标,i右移
+
                 while (lo<hi){
                     if(nums[lo]+nums[hi]==sum){
                         res.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
