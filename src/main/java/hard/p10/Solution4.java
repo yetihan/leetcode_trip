@@ -7,7 +7,7 @@ package hard.p10;
 
 
 public class Solution4 {
-    // top-bottom
+
     public boolean isMatch(String s, String p) {
         if (p.isEmpty()) return s.isEmpty();
         boolean[][]dp = new boolean[s.length() + 1][p.length() + 1]; //长度k的string s,要用到0-k合计k+1个索引

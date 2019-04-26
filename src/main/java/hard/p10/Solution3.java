@@ -9,7 +9,7 @@ public class Solution3 {
 
     //不直接用boolean,是为了避免基本类型的自动初始化
     enum ResultEnum {
-        TRUE, FALSE;
+        TRUE, FALSE
     }
 
     private ResultEnum[][] memo;
