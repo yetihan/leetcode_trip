@@ -57,4 +57,16 @@ dp\[lo][hi]
 dp\[lo][hi]  = dp\[lo+1][hi-1]  
 
 
+正确的dp思路:
+```
+dp[i]表示已s[i]结尾的最长有效括号串
+```
+状态转移方程:
+`xxxxx()`  dp[i] = dp[i-2]+2
+`xxxx((xxxx))` dp[i] = dp[i-1]+2+dp[i-dp[i-1]-2]
+
+
+
+
+
 
