@@ -1,4 +1,4 @@
-package hard.p53;
+package easy.p53;
 
 /**
  * https://leetcode.com/problems/maximum-subarray/
