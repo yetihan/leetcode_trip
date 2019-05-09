@@ -17,11 +17,9 @@ public class Solution1 {
         // base case
         if(head==null || head.next==null) return head;
 
-        ListNode second = head.next;
-
         //递归
+        ListNode second = head.next;
         head.next = swapPairs(second.next);
-
         second.next = head;
         return second;
     }
