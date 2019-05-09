@@ -14,7 +14,7 @@ class Solution4 {
 
 //        PriorityQueue<ListNode> minHeap = new PriorityQueue<>(Comparator.comparing((ListNode o) -> o.val));
 
-        PriorityQueue<ListNode> minHeap = new PriorityQueue( new Comparator<ListNode>(){
+        PriorityQueue<ListNode> minHeap = new PriorityQueue<>( new Comparator<ListNode>(){
             public int compare(ListNode a, ListNode b){
                 return a.val - b.val;
             }
@@ -28,9 +28,9 @@ class Solution4 {
         ListNode cur = dumy;                //游标
         while (minHeap.size() > 0) {
             cur.next = minHeap.poll();
-
-            if(cur.next.next!=null) minHeap.add(cur.next.next);
             cur = cur.next;
+            if(cur.next!=null) minHeap.add(cur.next);
+
         }
 
         return dumy.next;
